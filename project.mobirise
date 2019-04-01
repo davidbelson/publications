@@ -34,7 +34,7 @@
     "siteFonts": [],
     "favicon": "@PROJECT_PATH@/assets/images/dbelson-headshot-128x128.png",
     "noImageResize": "",
-    "uniqCompNum": 4,
+    "uniqCompNum": 6,
     "versionPublish": "4.9.7",
     "screenshot": "screenshot.png"
   },
@@ -74,6 +74,58 @@
           "_global": false,
           "_once": false,
           "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            ".counter-container": {
+              "color": "#767676",
+              "ol": {
+                "margin-bottom": "0",
+                "li": {
+                  "margin-bottom": "1rem"
+                },
+                "& when (@stylizedCounters)": {
+                  "counter-reset": "myCounter",
+                  "li": {
+                    "list-style": "none",
+                    "padding-left": ".5rem",
+                    "&:before": {
+                      "position": "absolute",
+                      "left": "0px",
+                      "margin-top": "-10px",
+                      "counter-increment": "myCounter",
+                      "content": "counter(myCounter)",
+                      "display": "inline-block",
+                      "text-align": "center",
+                      "margin": "5px 10px",
+                      "line-height": "40px",
+                      "transition": "all .2s",
+                      "color": "contrast(@counterColor)",
+                      "background": "@counterColor",
+                      "width": "40px",
+                      "height": "40px",
+                      "border-radius": "50%",
+                      "& when (@squareCounters)": {
+                        "border-radius": "0"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "_name": "content11",
+          "_customHTML": "<section class=\"mbr-section article content11\">\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"checkbox\" title=\"Stylized Counters\" name=\"stylizedCounters\" checked>\n        <input type=\"checkbox\" title=\"Square Counters\" name=\"squareCounters\" condition=\"stylizedCounters\">\n        <input type=\"color\" title=\"Counter Color\" name=\"counterColor\" value=\"#149dcc\" condition=\"stylizedCounters\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"mbr-text counter-container col-12 col-md-8 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" data-multiline mbr-article>\n                <ol>\n                    <li><b>LAST MONTH IN INTERNET INTELLIGENCE</b>&nbsp;- Descriptive text. Published July 2018 - March 2019. <a href=\"https://blogs.oracle.com/author/david-belson\" target=\"_blank\">[VIEW ARCHIVE]</a></li><li><b>FINDING YOURSELF: THE CHALLENGES OF ACCURATE GEOLOCATION</b> - Descriptive text. Published January 2018. [<a href=\"https://dyn.com/blog/finding-yourself-the-challenges-of-accurate-ip-geolocation/\" target=\"_blank\">BLOG POST</a>, <a href=\"https://dyn.com/geolocation\" target=\"_blank\">EBOOK</a>, <a href=\"http://hub.dyn.com/webinars/finding-yourself-the-challenges-of-accurate-ip-geolocation\" target=\"_blank\">WEBINAR</a>]</li>\n                    <li><b>STATE OF THE INTERNET/CONNECTIVITY REPORT</b>&nbsp;- Descriptive text. Published Q1 2008 - Q1 2017. <a href=\"http://bit.ly/SotIarchive\" target=\"_blank\">[VIEW ARCHIVE]</a></li>\n                    <li><b>HOW WILL THE INTERNET SCALE?</b> - Descriptive text, Akamai white paper. Published 2008.&nbsp;<a href=\"http://bit.ly/HWTISwp\" target=\"_blank\">[READ]</a></li><li><b>WEB DEVELOPER MAGAZINE</b> - Descriptive text. Published 1996-7. [<a href=\"http://bit.ly/wmgjava\" target=\"_blank\">Who's Using Java? Survey Results</a> | <a href=\"http://bit.ly/wmgbhow\" target=\"_blank\">A Brief History of Webmastery</a> | <a href=\"http://bit.ly/wmgo4s\" target=\"_blank\">You Want It When?</a>]</li><li><b>DAVE RAGGETT - THE WORKING DRAFT</b> - Descriptive text, <i>World Wide Web Journal</i>. Published Summer 1996. <a href=\"http://bit.ly/raggettw3j\" target=\"_blank\">[READ]</a></li><li><b>THE NETWORK NATION REVISITED</b> - Descrip[tive text, Bachelors Thesis. Published May 1994. <a href=\"http://bit.ly/dbnnrthesis\" target=\"_blank\">[READ]</a></li>\n                </ol>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "rmpXvimvNb",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "content11-4"
         }
       ]
     },
